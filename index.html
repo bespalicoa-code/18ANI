@@ -1,0 +1,1211 @@
+```html
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#350817">
+<meta name="description" content="O surpriză specială pentru Nicoleta, la împlinirea celor 18 ani.">
+<title>Nicoleta — Chapter XVIII</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --wine:#350817;
+  --wine2:#501127;
+  --wine3:#74233f;
+  --gold:#c8a56b;
+  --gold2:#ead7ad;
+  --cream:#fbf6ee;
+  --paper:#f1e8dd;
+  --ink:#321a23;
+  --muted:#88747a;
+  --line:rgba(200,165,107,.38);
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"DM Sans",Arial,sans-serif;
+}
+
+*{box-sizing:border-box}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:80px;
+}
+
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:var(--sans);
+  -webkit-font-smoothing:antialiased;
+}
+
+body.locked{overflow:hidden}
+
+a{color:inherit}
+
+button{font:inherit}
+
+img{max-width:100%}
+
+::selection{
+  background:var(--gold);
+  color:var(--wine);
+}
+
+/* LOADER */
+
+.loader{
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  background:var(--wine);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:16px;
+  color:var(--gold2);
+  transition:opacity .8s,visibility .8s;
+}
+
+.loader.done{
+  opacity:0;
+  visibility:hidden;
+}
+
+.loader-mark{
+  font:300 72px/.9 var(--serif);
+}
+
+.loader-line{
+  width:100px;
+  height:1px;
+  background:var(--gold);
+  animation:loading 1.4s ease-in-out infinite alternate;
+}
+
+.loader-label{
+  font-size:9px;
+  letter-spacing:5px;
+  text-transform:uppercase;
+}
+
+@keyframes loading{
+  from{width:30px;opacity:.4}
+  to{width:130px;opacity:1}
+}
+
+/* NAV */
+
+.nav{
+  position:absolute;
+  z-index:20;
+  top:0;
+  left:0;
+  width:100%;
+  padding:27px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:var(--cream);
+  border-bottom:1px solid rgba(234,215,173,.16);
+}
+
+.brand{
+  font-size:10px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:var(--gold2);
+}
+
+.nav-right{
+  display:flex;
+  gap:27px;
+  align-items:center;
+}
+
+.nav a{
+  font-size:10px;
+  letter-spacing:1.5px;
+  text-decoration:none;
+  text-transform:uppercase;
+  color:var(--cream);
+  opacity:.85;
+  transition:color .2s;
+}
+
+.nav a:hover{color:var(--gold2)}
+
+.nav-number{
+  font:italic 22px var(--serif);
+  color:var(--gold2);
+}
+
+/* HERO */
+
+.hero{
+  min-height:100svh;
+  background:
+    radial-gradient(ellipse at 20% 20%,rgba(125,37,68,.5),transparent 48%),
+    linear-gradient(130deg,#260511,#430d21 65%,#280610);
+  color:var(--cream);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:5%;
+  padding:130px 9% 75px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:15px;
+  border:1px solid rgba(200,165,107,.24);
+  pointer-events:none;
+}
+
+.hero:after{
+  content:"XVIII";
+  position:absolute;
+  right:-30px;
+  bottom:-150px;
+  font:300 clamp(230px,38vw,600px)/1 var(--serif);
+  color:rgba(255,255,255,.025);
+  pointer-events:none;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:650px;
+  animation:fadeUp 1s .2s both;
+}
+
+.eyebrow{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:var(--gold2);
+  font-size:9px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+
+.eyebrow:before{
+  content:"";
+  width:35px;
+  height:1px;
+  background:var(--gold);
+}
+
+.hero-overline{
+  margin-top:38px;
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:7px;
+  text-transform:uppercase;
+}
+
+.hero h1{
+  font:300 clamp(70px,10vw,145px)/.83 var(--serif);
+  letter-spacing:-4px;
+  margin:24px 0;
+}
+
+.hero h1 span{
+  display:block;
+  font-weight:300;
+  font-style:italic;
+  color:var(--gold2);
+  margin-left:8%;
+}
+
+.hero-subtitle{
+  font:italic 400 clamp(20px,2.3vw,29px)/1.4 var(--serif);
+  color:#eadedc;
+  margin:32px 0 0;
+  max-width:400px;
+}
+
+.hero-bottom{
+  display:flex;
+  align-items:center;
+  gap:25px;
+  margin-top:42px;
+}
+
+.gold-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+  min-height:50px;
+  padding:0 24px;
+  background:var(--gold);
+  color:var(--wine);
+  text-decoration:none;
+  border:1px solid var(--gold);
+  font-size:10px;
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:background .25s,color .25s,transform .25s;
+}
+
+.gold-button:hover{
+  background:transparent;
+  color:var(--gold2);
+  transform:translateY(-2px);
+}
+
+.text-link{
+  color:var(--gold2);
+  text-decoration:none;
+  font-size:11px;
+  border-bottom:1px solid var(--line);
+  padding-bottom:5px;
+}
+
+.hero-visual{
+  z-index:2;
+  position:relative;
+  max-width:500px;
+  width:100%;
+  justify-self:end;
+  animation:fadeUp 1s .4s both;
+}
+
+.hero-frame{
+  position:relative;
+  padding:12px;
+  border:1px solid var(--line);
+}
+
+.hero-frame:before{
+  content:"";
+  position:absolute;
+  top:-15px;
+  right:-15px;
+  bottom:15px;
+  left:15px;
+  border:1px solid rgba(200,165,107,.25);
+  z-index:-1;
+}
+
+.hero-frame img{
+  display:block;
+  width:100%;
+  height:min(64vh,660px);
+  min-height:350px;
+  object-fit:cover;
+  background:var(--wine2);
+}
+
+.image-caption{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 5px 5px;
+  gap:15px;
+}
+
+.image-caption span:first-child{
+  color:var(--gold2);
+  font:italic 19px var(--serif);
+}
+
+.image-caption span:last-child{
+  color:#bda9ad;
+  font-size:8px;
+  letter-spacing:2px;
+}
+
+.scroll-note{
+  position:absolute;
+  bottom:24px;
+  left:9%;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#c5adb4;
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.scroll-note:before{
+  content:"";
+  height:1px;
+  width:35px;
+  background:var(--gold);
+}
+
+/* SECTIUNI */
+
+.section{
+  padding:115px 9%;
+}
+
+.section-head{
+  text-align:center;
+  max-width:620px;
+  margin:0 auto 60px;
+}
+
+.kicker{
+  color:#956d48;
+  font-size:9px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+
+.section-head h2{
+  font:400 clamp(42px,6vw,75px)/1 var(--serif);
+  color:var(--wine);
+  margin:20px 0;
+}
+
+.section-head p{
+  font-size:13px;
+  line-height:1.9;
+  color:var(--muted);
+}
+
+.ornament{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  color:var(--gold);
+  margin-top:28px;
+}
+
+.ornament:before,
+.ornament:after{
+  content:"";
+  width:45px;
+  height:1px;
+  background:var(--line);
+}
+
+/* SCRISOARE */
+
+.letter-section{
+  background:var(--paper);
+  position:relative;
+}
+
+.letter{
+  max-width:850px;
+  margin:auto;
+  padding:clamp(35px,7vw,85px);
+  background:var(--cream);
+  border:1px solid rgba(200,165,107,.6);
+  box-shadow:0 25px 80px rgba(53,8,23,.06);
+  position:relative;
+}
+
+.letter:before{
+  content:"";
+  position:absolute;
+  inset:9px;
+  border:1px solid rgba(200,165,107,.25);
+  pointer-events:none;
+}
+
+.letter-top{
+  text-align:center;
+  position:relative;
+}
+
+.letter-symbol{
+  color:var(--gold);
+  font-size:34px;
+}
+
+.letter h2{
+  font:400 clamp(39px,5vw,60px)/1.1 var(--serif);
+  color:var(--wine);
+  margin:15px 0 30px;
+}
+
+.letter-body{
+  position:relative;
+  max-width:650px;
+  margin:auto;
+}
+
+.letter-body p{
+  color:#634d53;
+  font:400 clamp(17px,2vw,21px)/1.9 var(--serif);
+  margin:0 0 22px;
+}
+
+.letter-body p:first-child:first-letter{
+  float:left;
+  font:500 66px/.8 var(--serif);
+  color:var(--wine3);
+  padding:8px 9px 0 0;
+}
+
+.signature{
+  margin-top:35px;
+  padding-top:25px;
+  border-top:1px solid var(--line);
+  text-align:right;
+  color:var(--wine3);
+  font:italic 26px var(--serif);
+}
+
+.signature small{
+  display:block;
+  color:var(--muted);
+  font:9px var(--sans);
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-top:8px;
+}
+
+/* GALERIE */
+
+.gallery-section{background:var(--cream)}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:22px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.gallery-card{
+  grid-column:span 6;
+  background:white;
+  padding:10px;
+  border:1px solid #e9dcd2;
+  cursor:pointer;
+  overflow:hidden;
+}
+
+.gallery-card:nth-child(3n+1){
+  grid-column:span 7;
+}
+
+.gallery-card:nth-child(3n+2){
+  grid-column:span 5;
+}
+
+.gallery-card:nth-child(3n){
+  grid-column:span 6;
+}
+
+.gallery-photo{
+  height:360px;
+  overflow:hidden;
+  background:#eadbd5;
+  position:relative;
+}
+
+.gallery-photo img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  transition:transform .7s cubic-bezier(.2,.7,.2,1);
+}
+
+.gallery-card:hover .gallery-photo img{
+  transform:scale(1.045);
+}
+
+.gallery-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding:17px 10px 9px;
+}
+
+.gallery-meta span:first-child{
+  color:var(--wine);
+  font:italic 21px var(--serif);
+}
+
+.gallery-meta span:last-child{
+  color:#a28c8f;
+  font-size:9px;
+  letter-spacing:1px;
+}
+
+/* URARI */
+
+.wishes-section{
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(122,36,64,.45),transparent 60%),
+    var(--wine);
+  color:var(--cream);
+}
+
+.wishes-section .section-head h2{color:var(--cream)}
+.wishes-section .section-head p{color:#d5c1c7}
+.wishes-section .kicker{color:var(--gold2)}
+
+.wishes-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.wish{
+  border-top:1px solid var(--line);
+  padding:25px 5px 15px;
+}
+
+.wish-num{
+  color:var(--gold);
+  font:italic 35px var(--serif);
+}
+
+.wish h3{
+  color:var(--gold2);
+  font:400 30px var(--serif);
+  margin:18px 0 10px;
+}
+
+.wish p{
+  color:#d8c6ca;
+  font-size:12px;
+  line-height:1.9;
+}
+
+/* FINAL */
+
+.final-section{
+  background:
+    radial-gradient(ellipse at 50% 100%,#ead8c7,transparent 65%),
+    var(--cream);
+  text-align:center;
+  padding:130px 8%;
+}
+
+.final-symbol{
+  color:var(--gold);
+  font-size:35px;
+}
+
+.final-section h2{
+  max-width:900px;
+  margin:30px auto;
+  color:var(--wine);
+  font:300 clamp(45px,7vw,88px)/1.05 var(--serif);
+}
+
+.final-section h2 em{
+  color:var(--wine3);
+  font-weight:400;
+}
+
+.final-section p{
+  max-width:480px;
+  margin:0 auto 30px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.9;
+}
+
+footer{
+  padding:30px 7%;
+  background:#260510;
+  color:var(--gold2);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+footer span:last-child{
+  color:#c6aeb5;
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  background:rgba(20,3,9,.96);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:25px;
+}
+
+.lightbox.open{display:flex}
+
+.lightbox img{
+  display:block;
+  max-width:95%;
+  max-height:85vh;
+  object-fit:contain;
+  border:1px solid var(--gold);
+}
+
+.lightbox-close{
+  position:absolute;
+  top:18px;
+  right:25px;
+  color:var(--cream);
+  border:0;
+  background:transparent;
+  font-size:38px;
+  cursor:pointer;
+}
+
+/* CONFETTI */
+
+#confetti{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:90;
+}
+
+/* ANIMATII */
+
+.reveal{
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity .8s ease,transform .8s ease;
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(25px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+  .hero{
+    grid-template-columns:1fr 0.85fr;
+    gap:28px;
+    padding-left:7%;
+    padding-right:7%;
+  }
+
+  .hero h1{
+    font-size:clamp(65px,9vw,100px);
+  }
+
+  .hero-visual{max-width:380px}
+
+  .hero-frame img{height:480px}
+
+  .wishes-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+  .gallery-photo{height:300px}
+}
+
+@media(max-width:650px){
+  .nav{
+    padding:22px 7%;
+  }
+
+  .brand{font-size:8px;letter-spacing:2px}
+
+  .nav-right{gap:13px}
+
+  .nav a{font-size:8px;letter-spacing:1px}
+
+  .nav-number{font-size:17px}
+
+  .hero{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    padding:125px 8% 65px;
+    gap:40px;
+  }
+
+  .hero-content{width:100%}
+
+  .hero h1{
+    font-size:clamp(70px,17vw,110px);
+    letter-spacing:-2px;
+  }
+
+  .hero-overline{margin-top:30px}
+
+  .hero-subtitle{font-size:24px}
+
+  .hero-bottom{
+    flex-wrap:wrap;
+    gap:18px;
+  }
+
+  .hero-visual{
+    width:88%;
+    max-width:none;
+    align-self:center;
+    margin:0 8px 15px 0;
+  }
+
+  .hero-frame img{
+    height:430px;
+    min-height:300px;
+  }
+
+  .scroll-note{display:none}
+
+  .section{padding:80px 7%}
+
+  .section-head{margin-bottom:40px}
+
+  .section-head h2{font-size:48px}
+
+  .letter{padding:35px 27px}
+
+  .letter:before{inset:6px}
+
+  .letter-body p{font-size:18px}
+
+  .gallery-grid{display:flex;flex-direction:column;gap:20px}
+
+  .gallery-photo{height:360px}
+
+  .gallery-card:nth-child(n){width:100%}
+
+  .wishes-grid{grid-template-columns:1fr 1fr;gap:18px}
+
+  .wish h3{font-size:27px}
+
+  .final-section{padding:95px 8%}
+
+  .final-section h2{font-size:56px}
+
+  footer{
+    flex-direction:column;
+    text-align:center;
+    line-height:1.8;
+  }
+}
+
+@media(max-width:380px){
+  .hero h1{font-size:65px}
+  .hero-frame img{height:350px}
+  .gallery-photo{height:290px}
+  .wishes-grid{grid-template-columns:1fr}
+  .final-section h2{font-size:45px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    scroll-behavior:auto!important;
+    animation:none!important;
+    transition:none!important;
+  }
+
+  .reveal{
+    opacity:1;
+    transform:none;
+  }
+}
+</style>
+</head>
+
+<body class="locked">
+
+<div class="loader" id="loader">
+  <div class="loader-mark">N.</div>
+  <div class="loader-line"></div>
+  <div class="loader-label">A little something for you</div>
+</div>
+
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<nav class="nav">
+  <div class="brand">A special celebration</div>
+  <div class="nav-right">
+    <a href="#scrisoare">Scrisoare</a>
+    <a href="#amintiri">Amintiri</a>
+    <span class="nav-number">XVIII</span>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-content">
+    <div class="eyebrow">O zi. O poveste. O amintire.</div>
+
+    <div class="hero-overline">Chapter eighteen</div>
+
+    <h1>Nicoleta<span>18 ani</span></h1>
+
+    <p class="hero-subtitle">
+      Pentru o persoană specială,
+      într-o zi care merită să rămână în suflet.
+    </p>
+
+    <div class="hero-bottom">
+      <a href="#scrisoare" class="gold-button">
+        Descoperă surpriza <span>↗</span>
+      </a>
+      <a href="#amintiri" class="text-link">Povestea noastră</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-frame">
+      <img src="poze/poza1.jpg"
+           alt="Fotografia de copertă"
+           onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(145deg,#501127,#260510)'">
+
+      <div class="image-caption">
+        <span>Un moment de păstrat.</span>
+        <span>NO. 018</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-note">Scroll to discover</div>
+</header>
+
+<main>
+
+<section class="section letter-section" id="scrisoare">
+  <div class="section-head reveal">
+    <div class="kicker">Words from the heart</div>
+    <h2>O scrisoare pentru tine</h2>
+    <p>
+      Unele lucruri sunt prea frumoase ca să fie spuse
+      în grabă. De aceea, merită câteva rânduri doar pentru tine.
+    </p>
+    <div class="ornament">✦</div>
+  </div>
+
+  <article class="letter reveal">
+    <div class="letter-top">
+      <div class="letter-symbol">❦</div>
+      <h2>Dragă Nicoleta,</h2>
+    </div>
+
+    <div class="letter-body">
+      <p>
+        Astăzi începe un capitol nou din povestea ta.
+        18 ani — o vârstă a visurilor mari, a speranțelor
+        frumoase și a momentelor care, fără să-ți dai seama,
+        vor deveni cele mai dragi amintiri.
+      </p>
+
+      <p>
+        Îți doresc să ai parte de zile care îți aduc zâmbete
+        sincere, oameni care îți apreciază sufletul și
+        experiențe care te ajută să descoperi cât de frumoasă
+        poate fi viața. Să ai curajul să alegi ceea ce te face
+        fericită și puterea de a merge înainte, indiferent de drum.
+      </p>
+
+      <p>
+        Să nu uiți niciodată să te bucuri de lucrurile simple:
+        de o conversație frumoasă, de un apus, de o îmbrățișare
+        din partea oamenilor dragi și de fiecare clipă care
+        îți face inima să zâmbească.
+      </p>
+
+      <p>
+        Îți doresc sănătate, liniște, iubire sinceră și împliniri
+        în tot ceea ce îți propui. Iar atunci când vei privi
+        în urmă, să găsești cât mai multe motive să zâmbești.
+      </p>
+
+      <p>
+        La mulți ani pentru cei 18 ani și pentru toate
+        poveștile frumoase care abia urmează să fie scrise!
+      </p>
+    </div>
+
+    <div class="signature">
+      Cu drag, pentru tine.
+      <small>La mulți ani, Nicoleta ♡</small>
+    </div>
+  </article>
+</section>
+
+<section class="section gallery-section" id="amintiri">
+  <div class="section-head reveal">
+    <div class="kicker">Captured moments</div>
+    <h2>Fragmente din povestea noastră</h2>
+    <p>
+      Fotografii, clipe și amintiri care merită păstrate
+      dincolo de ecran.
+    </p>
+    <div class="ornament">✦</div>
+  </div>
+
+  <div class="gallery-grid">
+    <article class="gallery-card reveal" onclick="openPhoto(this)">
+      <div class="gallery-photo">
+        <img src="poze/poza2.jpg" alt="Amintire specială">
+      </div>
+      <div class="gallery-meta">
+        <span>Momente speciale</span>
+        <span>01 / MEMORY</span>
+      </div>
+    </article>
+
+    <article class="gallery-card reveal" onclick="openPhoto(this)">
+      <div class="gallery-photo">
+        <img src="poze/poza3.jpg" alt="O amintire frumoasă">
+      </div>
+      <div class="gallery-meta">
+        <span>Clipe frumoase</span>
+        <span>02 / MEMORY</span>
+      </div>
+    </article>
+
+    <article class="gallery-card reveal" onclick="openPhoto(this)">
+      <div class="gallery-photo">
+        <img src="poze/poza4.jpg" alt="Un moment de neuitat">
+      </div>
+      <div class="gallery-meta">
+        <span>De păstrat în suflet</span>
+        <span>03 / MEMORY</span>
+      </div>
+    </article>
+
+    <article class="gallery-card reveal" onclick="openPhoto(this)">
+      <div class="gallery-photo">
+        <img src="poze/poza1.jpg" alt="Fotografie dragă">
+      </div>
+      <div class="gallery-meta">
+        <span>Și povestea continuă...</span>
+        <span>04 / MEMORY</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section wishes-section">
+  <div class="section-head reveal">
+    <div class="kicker">For your next chapter</div>
+    <h2>Patru lucruri pe care ți le doresc</h2>
+    <p>
+      Nu doar astăzi, ci în fiecare zi care urmează.
+    </p>
+    <div class="ornament">✦</div>
+  </div>
+
+  <div class="wishes-grid">
+    <article class="wish reveal">
+      <div class="wish-num">01</div>
+      <h3>Sănătate</h3>
+      <p>
+        Să ai putere, energie și liniștea de a te bucura
+        de toate lucrurile frumoase din viață.
+      </p>
+    </article>
+
+    <article class="wish reveal">
+      <div class="wish-num">02</div>
+      <h3>Iubire</h3>
+      <p>
+        Să fii înconjurată de oameni sinceri, alături
+        de care să poți fi mereu tu însăți.
+      </p>
+    </article>
+
+    <article class="wish reveal">
+      <div class="wish-num">03</div>
+      <h3>Curaj</h3>
+      <p>
+        Să ai încredere în visurile tale și să descoperi
+        cu bucurie toate drumurile care ți se deschid.
+      </p>
+    </article>
+
+    <article class="wish reveal">
+      <div class="wish-num">04</div>
+      <h3>Fericire</h3>
+      <p>
+        Să aduni amintiri minunate, zâmbete sincere
+        și clipe pe care să le povestești peste ani.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="final-section">
+  <div class="final-symbol">✧</div>
+
+  <div class="kicker">To be continued...</div>
+
+  <h2>
+    Cele mai frumoase amintiri
+    <em>abia urmează.</em>
+  </h2>
+
+  <p>
+    La mulți ani, Nicoleta! Fie ca noul capitol să-ți
+    aducă mai multe motive să zâmbești decât ai visat vreodată.
+  </p>
+
+  <button class="gold-button" onclick="celebrate()">
+    O ultimă surpriză <span>♡</span>
+  </button>
+
+  <div class="ornament">✦ ♡ ✦</div>
+</section>
+
+</main>
+
+<footer>
+  <span>Made with love</span>
+  <span>Nicoleta · Chapter XVIII</span>
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="closePhoto()">
+  <button class="lightbox-close" aria-label="Închide" onclick="closePhoto()">×</button>
+  <img id="lightbox-image" src="" alt="Fotografie mărită">
+</div>
+
+<script>
+/* LOADER */
+
+window.addEventListener("load", function(){
+  setTimeout(function(){
+    document.getElementById("loader").classList.add("done");
+    document.body.classList.remove("locked");
+  }, 700);
+});
+
+/* ANIMATII LA DERULARE */
+
+const revealObserver = new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+},{threshold:0.12});
+
+document.querySelectorAll(".reveal").forEach(function(el){
+  revealObserver.observe(el);
+});
+
+/* GALERIE FOTO */
+
+function openPhoto(card){
+  const img = card.querySelector("img");
+  if(!img || !img.naturalWidth) return;
+
+  document.getElementById("lightbox-image").src = img.src;
+  document.getElementById("lightbox").classList.add("open");
+  document.body.classList.add("locked");
+}
+
+function closePhoto(){
+  document.getElementById("lightbox").classList.remove("open");
+  document.body.classList.remove("locked");
+}
+
+document.addEventListener("keydown",function(e){
+  if(e.key === "Escape") closePhoto();
+});
+
+/* CONFETTI PREMIUM */
+
+const canvas = document.getElementById("confetti");
+const ctx = canvas.getContext("2d");
+
+let particles = [];
+let frame = null;
+
+function resizeCanvas(){
+  const dpr = Math.min(window.devicePixelRatio || 1,2);
+  canvas.width = window.innerWidth*dpr;
+  canvas.height = window.innerHeight*dpr;
+  canvas.style.width = window.innerWidth+"px";
+  canvas.style.height = window.innerHeight+"px";
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+
+window.addEventListener("resize",resizeCanvas);
+resizeCanvas();
+
+function celebrate(){
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const colors = ["#c8a56b","#ead7ad","#74233f","#fbf6ee","#a75b70"];
+
+  for(let i=0;i<160;i++){
+    particles.push({
+      x:window.innerWidth*(0.2+Math.random()*0.6),
+      y:window.innerHeight*0.4,
+      vx:(Math.random()-0.5)*9,
+      vy:(Math.random()-0.8)*10,
+      gravity:0.13+Math.random()*0.08,
+      size:3+Math.random()*5,
+      rotation:Math.random()*6.28,
+      spin:(Math.random()-0.5)*0.2,
+      color:colors[Math.floor(Math.random()*colors.length)],
+      life:0
+    });
+  }
+
+  if(!frame) animate();
+}
+
+function animate(){
+  ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
+
+  particles = particles.filter(function(p){
+    return p.y < window.innerHeight+40 && p.life < 230;
+  });
+
+  particles.forEach(function(p){
+    p.life++;
+    p.x += p.vx;
+    p.y += p.vy;
+    p.vy += p.gravity;
+    p.vx *= 0.993;
+    p.rotation += p.spin;
+
+    ctx.save();
+    ctx.translate(p.x,p.y);
+    ctx.rotate(p.rotation);
+    ctx.fillStyle = p.color;
+    ctx.fillRect(-p.size/2,-p.size/2,p.size,p.size*0.65);
+    ctx.restore();
+  });
+
+  if(particles.length){
+    frame = requestAnimationFrame(animate);
+  }else{
+    cancelAnimationFrame(frame);
+    frame = null;
+    ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
+  }
+}
+</script>
+
+</body>
+</html>
+```
