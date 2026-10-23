@@ -33,7 +33,10 @@ html.js:not(.go) .hero *{animation-play-state:paused}
 #lb p{font-family:var(--serif);font-size:1.5rem;color:var(--blush)}
 #lb button{position:absolute;background:none;border:0;color:var(--gold);font-size:2.6rem;line-height:1;cursor:pointer;padding:.5rem 1rem}
 #lb .lb-x{top:calc(.5rem + env(safe-area-inset-top,0px));right:.5rem}#lb .lb-p{left:.25rem;top:50%}#lb .lb-n{right:.25rem;top:50%}
-.cake{width:min(86%,340px);display:block;margin:1.5rem auto 1.2rem}
+.cake{width:min(86%,340px);display:block;margin:1rem auto .25rem}
+/* Tortul și elementul de dedesubt stau mai aproape unul de altul */
+.end #blow{margin-top:.15rem}
+.end #letter .card{margin-top:1rem}
 .flame{fill:#FFB84D;transform-box:fill-box;transform-origin:50% 100%;animation:fl .22s ease-in-out infinite alternate;transition:opacity .6s,transform .6s}
 .flame.out{opacity:0;transform:scaleY(.1) translateY(4px);animation:none}
 @keyframes fl{from{transform:scale(1,1) rotate(-3deg)}to{transform:scale(.88,1.12) rotate(3deg)}}
