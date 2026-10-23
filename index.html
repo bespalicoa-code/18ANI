@@ -93,18 +93,18 @@ figure:hover:after{transform:translate(4px,4px);opacity:.9}
 .band h2{font-size:clamp(2.1rem,5vw,3.8rem);color:#fff;margin-bottom:.6rem}
 .band p{color:#EBD0D6}
 
-/* Final / Tort / Scrisoare */
-.end{background:linear-gradient(180deg,var(--burg),var(--deep));color:var(--blush);text-align:center;padding:clamp(4rem,9vw,8rem) 1.5rem calc(clamp(4rem,9vw,8rem) + 8px);position:relative;overflow:hidden}
+/* Final / Tort / Scrisoare (Aici am redus spațiile pentru telefon) */
+.end{background:linear-gradient(180deg,var(--burg),var(--deep));color:var(--blush);text-align:center;padding:clamp(2.5rem,5vw,4.5rem) 1.5rem calc(clamp(2rem,4vw,4rem) + 8px);position:relative;overflow:hidden}
 .end:before,.end:after{content:"✧";position:absolute;color:rgba(200,162,122,.45);font-size:4rem;animation:luxTwinkle 5s ease-in-out infinite}
 .end:before{left:8%;top:12%}.end:after{right:8%;bottom:10%;animation-delay:1.2s}
-.end h2{font-size:clamp(2.6rem,7vw,5.5rem);margin-bottom:1.5rem}
-.end p{max-width:50ch;margin:0 auto 1rem;color:#EBD0D6}
-.end .sig{font-family:var(--serif);font-style:italic;font-size:1.8rem;color:var(--gold);margin-top:2rem}
-.end hr{width:64px;border:0;border-top:1.5px solid var(--gold);margin:2rem auto}
+.end h2{font-size:clamp(2.4rem,6vw,4.5rem);margin-bottom:1rem}
+.end p{max-width:50ch;margin:0 auto 0.8rem;color:#EBD0D6}
+.end .sig{font-family:var(--serif);font-style:italic;font-size:1.8rem;color:var(--gold);margin-top:1.5rem}
+.end hr{width:64px;border:0;border-top:1.5px solid var(--gold);margin:1.5rem auto}
 
-.cake{width:min(86%,340px);display:block;margin:1rem auto .25rem}
-.end #blow{margin-top:.15rem}
-.end #letter .card{margin-top:1rem;box-shadow:0 20px 55px rgba(0,0,0,.15)}
+.cake{width:min(80%,300px);display:block;margin:0.5rem auto .2rem}
+.end #blow{margin-top:0.1rem}
+.end #letter .card{margin-top:0.8rem;box-shadow:0 20px 55px rgba(0,0,0,.15)}
 
 /* Flăcări lumânări optimizate */
 .cake .flame { fill: #ffb52e !important; opacity: 1 !important; transform-box: fill-box; transform-origin: 50% 100%; animation: candleBurn .32s ease-in-out infinite alternate !important; filter: drop-shadow(0 0 3px #ff9d24) drop-shadow(0 0 7px rgba(255,125,20,.85)); }
@@ -115,12 +115,12 @@ figure:hover:after{transform:translate(4px,4px);opacity:.9}
 #letter{display:grid;grid-template-rows:0fr;transition:grid-template-rows 1s ease}
 #letter.show{grid-template-rows:1fr}
 #letter>div{overflow:hidden;min-height:0}
-#letter .card{max-width:56ch;margin:2.5rem auto 0;padding:2rem 1.5rem;border:1.5px solid var(--gold);border-radius:6px;background:rgba(0,0,0,.18);text-align:left}
-#letter h3{font-size:2rem;color:var(--gold);margin-bottom:.8rem}
-#letter p{margin:0 0 .9rem}
+#letter .card{max-width:56ch;margin:1.5rem auto 0;padding:1.5rem 1.2rem;border:1.5px solid var(--gold);border-radius:6px;background:rgba(0,0,0,.18);text-align:left}
+#letter h3{font-size:1.8rem;color:var(--gold);margin-bottom:.6rem}
+#letter p{margin:0 0 .8rem}
 
 /* Butoane și elemente globale */
-.btn{font:600 1rem var(--sans);color:#3F0E1A;background:var(--gold);border:0;border-radius:999px;padding:.9rem 2rem;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s}
+.btn{font:600 1rem var(--sans);color:#3F0E1A;background:var(--gold);border:0;border-radius:999px;padding:.8rem 1.8rem;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s}
 .btn:hover{transform:translateY(-2px);box-shadow:0 9px 22px rgba(0,0,0,.16)}
 .btn.ghost{background:transparent;color:var(--gold);border:1.5px solid var(--gold)}
 .btn:disabled{opacity:.75;cursor:default}
@@ -174,6 +174,6 @@ figure::after{inset:10px -8px -10px 8px!important}
 </style>
 </head>
 <body>
-<!-- Pagina este pregătită și optimizată pentru Nicoleta -->
+<!-- Pagina este optimizată pentru telefon -->
 </body>
 </html>
