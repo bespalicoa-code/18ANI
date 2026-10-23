@@ -390,5 +390,68 @@ setTimeout(function(){$("#letter").scrollIntoView({behavior:RM?"auto":"smooth",b
 })();
 </script>
 
+
+<style id="mobile-final-fixes">
+/* Optimizare finală pentru telefoane */
+@media (max-width: 760px) {
+  html { scroll-padding-top: 58px; }
+  body { font-size: 16px; line-height: 1.6; }
+  .lux-nav { gap: 8px; padding: 8px 10px; }
+  .lux-links { gap: 9px; }
+  .lux-links a { font-size: 10px; letter-spacing: .03em; }
+  .hero {
+    min-height: auto;
+    padding: 72px 20px 38px;
+  }
+  .hero-in { display: flex; flex-direction: column; gap: 22px; }
+  .hero-in > div:first-child { order: 1; text-align: center; }
+  .portrait { order: 0; width: min(64vw, 250px); margin: 0 auto; }
+  .hero h1 { font-size: clamp(3rem, 13vw, 5rem); margin: 8px 0 14px; }
+  .hero .age { justify-content: center; gap: 12px; margin-bottom: 14px; }
+  .hero .age b { font-size: clamp(6rem, 28vw, 9rem); }
+  .hero .age span { font-size: clamp(1.2rem, 5vw, 1.7rem); }
+  .hero .lead { margin: 0 auto; max-width: 34ch; }
+  .intro { padding: 42px 22px; }
+  .chap { padding: 36px 24px 44px; }
+  .chap-in { display: flex; flex-direction: column; gap: 22px; }
+  .chap figure { width: 100%; max-width: 430px; margin: 0 auto; }
+  .chap figure img { max-height: 62vh; object-fit: cover; }
+  .chap .txt { width: 100%; text-align: center; }
+  .chap h2 { font-size: clamp(2rem, 8vw, 2.8rem); margin-bottom: 8px; }
+  .chap p { margin: 0 auto; max-width: 36ch; }
+  .band img { height: 58vh; min-height: 320px; max-height: 540px; }
+  .band div { left: 22px; right: 22px; bottom: 24px; }
+  .end { padding: 34px 18px 30px; }
+  .end h2 { font-size: clamp(2.2rem, 9vw, 3.2rem); margin-bottom: 10px; }
+  .end > p { max-width: 34ch; margin: 0 auto 12px; }
+  .cake { width: min(74vw, 270px) !important; margin: 4px auto -8px !important; }
+  .end #blow { display: block; margin: 0 auto 8px !important; padding: 12px 22px; }
+  #letter .card { margin: 8px auto 0; padding: 20px 17px; }
+  #gate { padding: 24px 20px; gap: 14px; }
+  #gate svg { width: 82px; }
+  #gate h2 { font-size: clamp(2rem, 8vw, 2.7rem); }
+  #gate p { max-width: 30ch; }
+  #gate .row { width: 100%; gap: 10px; }
+  #gate .btn { min-height: 46px; padding: 11px 16px; }
+  #lb { padding: 58px 12px 20px; }
+  #lb img { max-width: 94vw; max-height: 70vh; }
+  #mus { width: 42px; height: 42px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); }
+  #toTop { right: 12px; }
+}
+@media (max-width: 390px) {
+  .lux-brand small { display: none; }
+  .lux-links a { font-size: 9px; }
+  .hero { padding-left: 16px; padding-right: 16px; }
+  .chap { padding-left: 20px; padding-right: 20px; }
+  .cake { width: min(70vw, 245px) !important; }
+}
+@media (orientation: landscape) and (max-height: 520px) {
+  #gate { overflow-y: auto; justify-content: flex-start; }
+  #gate svg { width: 58px; }
+  #gate h2 { font-size: 1.8rem; }
+  .hero { min-height: auto; }
+}
+</style>
+
 </body>
 </html>
